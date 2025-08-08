@@ -1,16 +1,14 @@
 import React from 'react'
-import {Container , Logo , LogoutBtn} from '../index'
-import { Link , useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-
-
+import {Container, Logo, LogoutBtn} from '../index'
+import { Link } from 'react-router-dom'
+import {useSelector} from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
-  const authStatus = useSelector((state)=>
-    state.auth.status
-   )
-   const navigate = useNavigate()
-   const navItems = [
+  const authStatus = useSelector((state) => state.auth.status)
+  const navigate = useNavigate()
+
+  const navItems = [
     {
       name: 'Home',
       slug: "/",
@@ -37,10 +35,6 @@ function Header() {
       active: authStatus,
   },
   ]
-
-
-
-
 
 
   return (

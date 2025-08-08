@@ -22,8 +22,7 @@ function Signup() {
                 navigate("/")
             }
         } catch (error) {
-            console.log("error in comp->Signup.jsx" , error);
-            
+            setError(error.message)
         }
     }
 

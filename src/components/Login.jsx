@@ -22,8 +22,7 @@ function Login() {
                 navigate("/")
             }
         } catch (error) {
-            console.log("error in comp->Login.jsx" , error);
-            
+            setError(error.message)
         }
     }
 
